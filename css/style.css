@@ -8,11 +8,28 @@ li {list-style: none;}
 a {text-decoration: none; color: inherit;}
 img {vertical-align: top; max-width: 100%; filter: none;}
 button {background-color: inherit; cursor: pointer;}
-html, body {font-family: 'Roboto', 'Noto Sans KR', sans-serif; color: #000; overflow-x: hidden; position: relative; height: 100%;}
+html, body {font-family: 'Noto Sans KR', sans-serif; color: #000; overflow-x: hidden; position: relative; height: 100%;}
 
 
 
 
 
+header {position: fixed; top: 0; left: 0; width: 100%; height: 80px; background-color: #fff; display: flex; justify-content: center; align-items: center; box-shadow: 0px 10px 15px rgba(0,0,0,0.1); z-index: 1000;}
+header h2 {font-family: serif; font-style: italic; font-size: 36px; font-weight: 900;}
 
 
+.wrap {display: flex; gap: 50px; width: 100%; margin: 140px auto 80px;}
+
+.wrap .left {width: 200px;}
+
+.wrap .right {width: 100%; display: flex; flex-direction: row; flex-wrap: wrap; gap: 3%; padding: 0 16px;}
+.wrap .right .contents {width: 22%;}
+.wrap .right .contents:nth-child(n+5) {margin-top: 30px; padding-top: 30px; border-top: 1px solid #ddd;}
+.wrap .right .contents img {width: 100%; transition: all 0.3s; border: 1px solid #000; border-radius: 10px;}
+.wrap .right .contents h2 {overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 21px; line-height: 21px; margin-top: 15px; margin-bottom: 10px;}
+.wrap .right .contents p {font-size: 15px; display: flex;}
+.wrap .right .contents p span:first-child {display: block; width: 70px; text-align: right;}
+.wrap .right .contents p span:last-child {display: block; width: calc(100% - 70px); word-break: keep-all;}
+.wrap .right .contents p:last-child {margin-top: 3px;}
+
+.wrap .right .contents:hover img {transform: scale(1.02);}
